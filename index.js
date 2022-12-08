@@ -21,14 +21,21 @@ function createCircle(radius) {
 
     };
 }
-createCircle(6).draw()
+let circle2 = createCircle(6)
+circle2.draw()
+console.log("cirlce2 :" + circle2)
 
 //Constructor functioon
 function Circle (radius) {
+    console.log(this)
     this.radius = radius;
     this.draw = function() {
         console.log("Draw through constructor: " + this.radius)
     }
 
 }
-new Circle(4).draw();
+let circle3 =new Circle(4);
+circle3.draw();
+console.log(circle3)
+
+console.log(Circle.length)
